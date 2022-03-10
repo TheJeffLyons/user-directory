@@ -7,25 +7,26 @@ function NameCard(props) {
   return (
   
     <div className='card'>
-      <h1>{props.name.first} {props.name.last}</h1>
+      <div className='user-count'><h1>{props.id}/25</h1></div>
+      <h1 className='user-name'><u className='user-under'>{props.name.first} {props.name.last}</u></h1>
       <p>
-        <span>From:</span> <span>{props.city}, {props.country}</span>
+        <span className='user-titles'>From:</span> <span>{props.city}, {props.country}</span>
       </p>
       <p>
-        <span>Job Title:</span> <span>{props.title}</span>
+        <span className='user-titles'>Job Title:</span> <span>{props.title}</span>
       </p>
       <p>
-        <span>Employer:</span> <span>{props.employer}</span>
+        <span className='user-titles'>Employer:</span> <span>{props.employer}</span>
       </p>
       <br></br>
-      <p>
+      <p className='user-titles'>
         Favorite Movies:
       </p>
-        <span>1.</span> <span>{props.favoriteMovies[0]}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>1.</span> <span>{props.favoriteMovies[0]}</span>
         <br></br>
-        <span>2.</span> <span>{props.favoriteMovies[1]}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>2.</span> <span>{props.favoriteMovies[1]}</span>
         <br></br>
-        <span>3.</span> <span>{props.favoriteMovies[2]}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>3.</span> <span>{props.favoriteMovies[2]}</span>
     </div>
   
   )
