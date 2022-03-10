@@ -17,12 +17,17 @@ function Main() {
   const [user, setUser] = React.useState(0)
 
   const nextUser = () => {
-    setUser(user + 1)
+    if(user < 24){
+      setUser(user + 1)
+    }
   }
 
   const prevUser = () => {
-    setUser(user - 1)
+   if(user > 0){
+     setUser(user - 1)
+   }
   }
+
   return (
     <>
     <Header/>
