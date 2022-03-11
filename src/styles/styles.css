@@ -77,7 +77,7 @@
 .form{
     display: flex;
     background-color: rgb(95, 161, 247);
-    margin: 1000px;
+    
     justify-content: center;
     margin-top: 80px;
     padding-bottom: 50px;
@@ -89,6 +89,9 @@
 .insideForm{
     display: flex;
     flex-direction: column;
-    
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
 
 }

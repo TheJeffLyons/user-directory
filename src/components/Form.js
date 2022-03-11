@@ -79,7 +79,9 @@ function Form() {
                 />
                    <br></br>
                    <br></br>
-                <label>3 Favorite Movies*</label> 
+                
+                <fieldset>3 Favorite Movies*
+                <label></label> 
                 <br></br>
                 <input 
                 type='text'
@@ -104,6 +106,7 @@ function Form() {
                 onChange={formik.handleChange}
                 value={formik.values.name}
                 />
+                </fieldset>
                 <br></br>
                 <br></br>
                 <button type='submit'>Submit</button>
