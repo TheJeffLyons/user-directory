@@ -5,20 +5,22 @@ import data from '../data';
 import '../styles/styles.css'
 import Form from './Form';
 
-const cards = data.map(item =>{
-  return(
-    <NameCard
-      {...item}
-    />
-  )
-})
 
 function Main() {
+
+  const [theData, setTheData] = React.useState(data)
+
+  const cards = theData.map(item =>{
+    return(
+      <NameCard
+        {...item}
+      />
+    )
+  })
 
 
   
   const [showForm, setShowForm] = React.useState(false)
-  const [userData, setUserData] = React.useState(cards)
   const [user, setUser] = React.useState(0)
   
   function formOn(){
@@ -34,21 +36,17 @@ function Main() {
       }
     }
     
-    function deleteUser(user){
-      let id = user + 1
+    function deleteUser(){
+      let notUser = document.getElementById('user-id').innerHTML
+      let newNotUser = parseInt(notUser)
+      const newUserData = theData.filter((item) => item.id !== newNotUser);
       
-      const newUserData = data.filter((item) => item.id !== id);
-      
-      setUserData(newUserData)
-      console.log('clicked')
-      
-      console.log(newUserData)
+      setTheData(newUserData)
 
-      
     }
     
   const nextUser = () => {
-    if(user < 24){
+    if(user < theData.length -1){
       setUser(user + 1)
     }
   }
@@ -63,7 +61,7 @@ function Main() {
     <>
     <Header/>
     <div className='user-card-main'>
-    <section>{userData[user]}</section>
+    <section>{cards[user]}</section>
     <div className='user-buttons'>
       <button className='user-change1' onClick={prevUser}>&#60; Previous</button>
     <div className='center-btns'>

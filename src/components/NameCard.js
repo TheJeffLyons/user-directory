@@ -7,7 +7,7 @@ function NameCard(props) {
   return (
   
     <div className='card'>
-      <div className='user-count'><h1>{props.id}/25</h1></div>
+      <div className='user-count'><h1 id='user-id'>{props.id}</h1><h1>/{data.length}</h1></div>
       <h1 className='user-name'><u className='user-under'>{props.name.first} {props.name.last}</u></h1>
       <p>
         <span className='user-titles'>From:</span> <span>{props.city}, {props.country}</span>
